@@ -1,0 +1,16 @@
+{
+  "name": "@repo/shared",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./types/*": "./types/*.ts",
+    "./constants": "./constants.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "5.9.2"
+  }
+}
