@@ -5,15 +5,20 @@ import prettierConfig from 'eslint-config-prettier'
 /** @type {import("eslint").Linter.Config[]} */
 export default [
   {
-    ignores: ['**/node_modules/**', '**/dist/**'],
+    ignores: ['**/node_modules/**', '**/.next/**', '**/dist/**', '**/.turbo/**'],
   },
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       parser: tsparser,
-      parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
     },
-    plugins: { '@typescript-eslint': tseslint },
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
     rules: {
       ...tseslint.configs.recommended.rules,
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
