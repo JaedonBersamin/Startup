@@ -58,3 +58,4 @@ pnpm-debug.log*
 .vercel
 .cache/
 *.tsbuildinfo
+*.md.local
